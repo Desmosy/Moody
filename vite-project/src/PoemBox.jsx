@@ -18,7 +18,7 @@ export default function PoemBox() {
             const result = await model.generateContent(prompt);
             const text = result.response.text;
             setResponse(text);
-            setShowCard(true); // Show the card when response is set
+            setShowCard(true); 
         } catch (err) {
             setError(err.message);
         }
@@ -28,6 +28,10 @@ export default function PoemBox() {
         fetchPoem();
     }
 
+    const handleShare = () => {
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(response)}`;
+        window.open(twitterUrl, "_blank");
+    }
     return (
         <div className="poem-container">
             <input
@@ -41,6 +45,7 @@ export default function PoemBox() {
             {showCard && (
                 <div className="poem-card">
                     {error ? <p>{error}</p> : <p>{response}</p>}
+                    < button onClick={handleShare} className="share"><img className="twitter" src="https://cdn-icons-png.flaticon.com/128/5968/5968830.png"/></button>
                 </div>
             )}
         </div>

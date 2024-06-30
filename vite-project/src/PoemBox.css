@@ -5,6 +5,9 @@
     margin-top: 20px;
 }
 
+.twitter{
+    height: 20px;
+}
 input {
     padding: 10px;
     margin: 10px 0;
@@ -24,7 +27,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: white;
 }
 
 .poem-card {
