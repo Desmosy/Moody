@@ -11,7 +11,7 @@ export default function PoemBox() {
 
     const fetchPoem = async (prompt) => {
         try {
-            const genAI = new GoogleGenerativeAI("AIzaSyA6aT6NGyZag_sKeGCTqakcO-onXGM6-NQ");
+            const genAI = new GoogleGenerativeAI("AIzNQ");
             const model = genAI.getGenerativeModel({
                 model: "gemini-1.5-flash"
             });
