@@ -1,6 +1,7 @@
 .poem-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap:20px;
     align-items: center;
     margin-top: 20px;
 }
@@ -28,6 +29,7 @@ button {
 
 button:hover {
     background-color: white;
+    color: black;
 }
 
 .poem-card {
